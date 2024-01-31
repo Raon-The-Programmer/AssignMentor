@@ -35,52 +35,52 @@ const studentsAll = mongoose.model('studentsAll', studentSchema, 'stduents');
 const mentors = mongoose.model('mentors', mentorSchema, 'mentors');
 
 app.get('/', (req, res) => {
-  res.send(`   <h1 style="color: #333; text-align: center;">All End Points Display:</h1>
+  res.send(`  <div style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+  <h1 style="color: #333; text-align: center;">All End Points Display</h1>
 
-  <div style="margin: 20px;">
-      <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-          <tr style="background-color: #f2f2f2;">
-              <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Endpoint</th>
-              <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Description</th>
-          </tr>
-          <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">/student</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Student Information</td>
-          </tr>
-          <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">/mentors</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Mentors Information</td>
-          </tr>
-          <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">/create/student</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to create a new student</td>
-          </tr>
-          <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">/create/mentor</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to create a new mentor</td>
-          </tr>
-          <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">/assignmentor/:mentorId/:studentId</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to assign a student to a mentor</td>
-          </tr>
-          <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">/nomentor</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to get students without a mentor</td>
-          </tr>
-          <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">/assign-mentor/:studentId/:mentorId</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to assign or change mentor for a particular student</td>
-          </tr>
-          <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">/particularmentor/:mentorId</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to show all students for a particular mentor</td>
-          </tr>
-          <tr>
-              <td style="border: 1px solid #ddd; padding: 8px;">/previous-mentor/:studentId</td>
-              <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to show the previously assigned mentor for a particular student</td>
-          </tr>
-      </table>
-  </div>`)
+  <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Endpoint</th>
+      <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Description</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">/student</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Student Information</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">/mentors</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Mentors Information</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">/create/student</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to create a new student</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">/create/mentor</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to create a new mentor</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">/assignmentor/:mentorId/:studentId</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to assign a student to a mentor</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">/nomentor</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to get students without a mentor</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">/assign-mentor/:studentId/:mentorId</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to assign or change mentor for a particular student</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">/particularmentor/:mentorId</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to show all students for a particular mentor</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 8px;">/previous-mentor/:studentId</td>
+      <td style="border: 1px solid #ddd; padding: 8px;">Endpoint to show the previously assigned mentor for a particular student</td>
+    </tr>
+  </table>
+</div>`)
 })
 
 app.get('/student', (req, res) => {
